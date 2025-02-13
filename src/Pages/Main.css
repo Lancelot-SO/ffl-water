@@ -1,0 +1,9 @@
+.scroll-button {
+    position: absolute;
+    bottom: 5%;
+    /* Adjust as needed */
+    left: 43%;
+    transform: translateX(-50%);
+    z-index: 150;
+    /* Ensure it stays above thumbnails */
+}
