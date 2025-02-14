@@ -6,17 +6,19 @@ import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import About from './About';
 import Projects from './Projects';
 import Hero from '../Components/Hero';
+import Gallery from './Gallery';
 import { motion, AnimatePresence } from 'framer-motion';
 import "./Main.css"
 
 const Home = () => {
     const [currentPage, setCurrentPage] = useState("hero"); // Track current section
 
-    // Function to switch pages in a cycle (Hero → About → Projects → Hero)
+    // Function to switch pages in a cycle (Hero → About → Projects → Gallery → Hero)
     const handleNextPage = () => {
         setCurrentPage((prev) => {
             if (prev === "hero") return "about";
             if (prev === "about") return "projects";
+            if (prev === "projects") return "gallery";
             return "hero";
         });
     };
@@ -36,6 +38,7 @@ const Home = () => {
                     {currentPage === "hero" && <Hero />}
                     {currentPage === "about" && <About />}
                     {currentPage === "projects" && <Projects />}
+                    {currentPage === "gallery" && <Gallery />}
                 </motion.div>
             </AnimatePresence>
 
@@ -46,9 +49,11 @@ const Home = () => {
                            hover:bg-blue-700 transition duration-300 scroll-button"
             >
                 <MdOutlineKeyboardDoubleArrowDown
-                    className={`text-2xl mr-2 animate-bounce transition-transform duration-300 ${currentPage === "projects" ? "rotate-180" : ""}`}
+                    className={`text-2xl mr-2 animate-bounce transition-transform duration-300 ${currentPage === "gallery" ? "rotate-180" : ""}`}
                 />
-                {currentPage === "hero" ? "Go to About" : currentPage === "about" ? "Go to Projects" : "Back to Home"}
+                {currentPage === "hero" ? "Go to About" :
+                    currentPage === "about" ? "Go to Projects" :
+                        currentPage === "projects" ? "Go to Gallery" : "Back to Home"}
             </button>
 
             {/* Social Media Icons */}
