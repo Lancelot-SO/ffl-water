@@ -39,7 +39,7 @@ const Gallery = () => {
     return (
         <div className="h-screen w-full relative">
             {/* Background Image */}
-            <img src={gallerybg} alt="project" className="w-full h-full object-cover" />
+            <img src={gallerybg} alt="project" loading="lazy" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/10"></div>
 
             {/* Header Section */}
@@ -51,7 +51,7 @@ const Gallery = () => {
 
             {/* Gallery Grid with Smooth Slide Animation */}
             <div className="absolute top-[15%] lg:left-[600px] lg:w-[731px] lg:h-[500px] h-auto
-                            bg-white/10 backdrop-blur-[5px] border border-white/20 
+                            bg-white/10 backdrop-blur-[5px] border border-white/30 
                             shadow-lg rounded-xl p-5 flex justify-center items-center transition-all overflow-hidden">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -71,6 +71,7 @@ const Gallery = () => {
                                 <img
                                     src={image}
                                     alt={`Project ${index + 1}`}
+                                    loading="lazy"
                                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                                 />
                             </div>
@@ -116,7 +117,7 @@ const Gallery = () => {
                             <button className="absolute top-4 right-4 text-white bg-black w-10 h-10 rounded-full" onClick={() => setSelectedImage(null)}>X</button>
                             <button className="absolute top-1/2 left-4 text-white bg-black/50 px-3 py-2 rounded-full" onClick={handlePrev}><FaArrowLeft /></button>
                             <button className="absolute top-1/2 right-4 text-white bg-black/50 px-3 py-2 rounded-full" onClick={handleNext}><FaArrowRight /></button>
-                            <img src={images[currentIndex]} alt="Selected" className="w-full h-full object-cover" />
+                            <img src={images[currentIndex]} alt="Selected" loading="lazy" className="w-full h-full object-cover" />
                         </motion.div>
                     </motion.div>
                 )}
