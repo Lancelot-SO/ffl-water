@@ -40,7 +40,7 @@ const Gallery = () => {
         <div className="h-screen w-full relative">
             {/* Background Image */}
             <img src={gallerybg} alt="project" loading="lazy" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/10"></div>
+            <div className="absolute inset-0 bg-black/30"></div>
 
             {/* Header Section */}
             <div className="absolute top-[40%] left-[200px] flex flex-col text-white">
@@ -51,7 +51,7 @@ const Gallery = () => {
 
             {/* Gallery Grid with Smooth Slide Animation */}
             <div className="absolute top-[15%] lg:left-[600px] lg:w-[731px] lg:h-[500px] h-auto
-                            bg-white/10 backdrop-blur-[5px] border border-white/30 
+                            bg-white/10 backdrop-blur-[5px] border border-white/20 
                             shadow-lg rounded-xl p-5 flex justify-center items-center transition-all overflow-hidden">
                 <AnimatePresence mode="wait">
                     <motion.div
