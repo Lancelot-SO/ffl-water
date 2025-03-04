@@ -1,0 +1,178 @@
+/* carousel */
+.carousel {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel .list .item.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Video for main slides */
+.carousel .list .item .video-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slide content */
+.carousel .list .item .content {
+    position: absolute;
+    top: 35%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.des {
+    width: 600px;
+}
+
+.carousel .list .item .author {
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.carousel .list .item .title {
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 1.3em;
+    width: 400px;
+}
+
+/* Thumbnail */
+.thumbnail {
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.thumbnail .item.active {
+    border: 2px solid #E3F7FC;
+    opacity: 1;
+    border-radius: 20px;
+}
+
+/* Video for thumbnails */
+.thumbnail .item .thumbnail-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #E3F7FC;
+    /* Rounded edges for thumbnail videos */
+}
+
+.thumbnail .item .content {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title {
+    font-weight: 500;
+}
+
+/* Arrows */
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.arrows button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Disable button clicks during animation */
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+    pointer-events: none;
+}
+
+/* Running time bar */
+.carousel .time {
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+    animation: runningTime 3s linear 1 forwards;
+}
+
+@keyframes runningTime {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content {
+        padding-right: 0;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 30px;
+    }
+}
