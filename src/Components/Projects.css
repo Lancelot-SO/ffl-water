@@ -30,15 +30,20 @@
 
 .main-carousel .slide-list .slide-item .slide-content {
     position: absolute;
-    top: 20%;
+    top: 15%;
     width: 740px;
     max-width: 80%;
-    left: 60%;
+    left: 55%;
     transform: translateX(-60%);
-    padding-right: 30%;
+    padding: 20px 30% 20px 20px;
     box-sizing: border-box;
     color: #fff;
-    text-shadow: 0 5px 10px #0004;
+    background: rgba(17, 15, 15, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
 }
 
 .description {
@@ -141,7 +146,6 @@
     max-width: 30%;
     display: flex;
     gap: 10px;
-    align-slide-items: center;
 }
 
 .arrows button {

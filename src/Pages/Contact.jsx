@@ -24,11 +24,12 @@ const Contact = () => {
     return (
         <div className='w-screen h-screen relative'>
             <img src={contactbg} alt='contact' loading='lazy' className='w-full h-full object-cover' />
+            <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
 
             <div className='absolute w-full lg:top-[350px] lg:gap-0 gap-6 top-36 flex lg:flex-row flex-col items-center justify-between text-white lg:px-[200px] px-4'>
                 <div className='flex flex-col gap-6'>
                     <motion.div initial='hidden' animate='visible' custom={0} variants={fadeUpVariants}>
-                        <h1 className='text-5xl font-bold mb-4'>Speak to us</h1>
+                        <h1 className='text-5xl font-bold mb-4'>SPEAK TO US</h1>
                         <div className="bg-white w-16 h-2 mb-4"></div>
                         <p className='text-[12px] w-[250px] h-[50px]'>Ready to Make a Splash? Let’s Talk!</p>
                     </motion.div>

@@ -27,12 +27,12 @@ const About = () => {
 
                             {/* Glass Container */}
                             <div className="absolute top-[20%] lg:left-[200px] lg:w-[1130px] lg:h-[410px] h-[1250px]
-                                            bg-white/10 backdrop-blur-[5px] border border-white/20 
+                                            bg-black/50 backdrop-blur-[5px] border border-white/20 
                                             shadow-lg rounded-xl flex lg:flex-row flex-col flex-shrink-0 gap-5 transition-all">
 
                                 {/* Red Section */}
                                 <div className="flex flex-col lg:w-[500px] h-full p-5 items-start justify-center">
-                                    <h1 className="text-[30px] font-bold tracking-wider ">ENJOY YOUR TIME WORKING</h1>
+                                    <h1 className="text-[30px] font-bold tracking-wider ">ABOUT US</h1>
                                     <p className="text-[18px] mb-5">
                                         At FFL Water Features, we take pride in delivering top-quality service, with a client portfolio that reflects our strong work ethic, precision, and attention to detail.
                                     </p>

@@ -95,7 +95,7 @@ const ProjectSlider = () => {
                         {projects.map((project, index) => (
                             <li
                                 key={index}
-                                className={`mb-2 transition-all duration-300 ${index === currentIndex ? "text-white scale-110" : "opacity-50"}`}>
+                                className={`mb-2 transition-all duration-300 ${index === currentIndex ? "text-white font-bold scale-110" : "opacity-50"}`}>
                                 {project.name}
                             </li>
                         ))}
@@ -103,12 +103,12 @@ const ProjectSlider = () => {
                 </div>
                 <div className="slide-list">
                     {projects.map((project, index) => (
-                        <div key={index} className={`slide-item ${index === currentIndex ? "active" : ""}`}>
+                        <div key={index} className={`slide-item relative ${index === currentIndex ? "active" : ""}`}>
                             <img src={project.image} alt={project.name} loading='lazy' />
                             <div className="slide-content">
                                 <div className="author">{project.author}</div>
                                 <div className="description w-[300px] lg:w-[600px]">{project.description}</div>
-                                <p className='font-semibold'>Project Details:</p>
+                                <p className='font-bold'>Project Details:</p>
                                 <ul className='project-details'>
                                     {project.details.map((detail, i) => (
                                         <li key={i}>{detail}</li>
@@ -118,10 +118,11 @@ const ProjectSlider = () => {
                         </div>
                     ))}
                 </div>
-                <div className='flex flex-col p-2 absolute bottom-[300px] right-[100px] w-[200px] h-[90px] bg-white z-50'>
-                    <small className='text-black'>Starting from</small>
-                    <span className='text-black text-[40px] font-extrabold'>{projects[currentIndex].price}</span>
+                <div className="absolute bottom-[300px] right-[100px] w-[200px] h-[90px] bg-black/20 backdrop-blur-md rounded-xl shadow-lg border border-white/30 flex flex-col items-center justify-center z-50 p-4">
+                    <small className="text-white uppercase text-xs tracking-wider">Starting from</small>
+                    <span className="text-white text-3xl font-extrabold">{projects[currentIndex].price}</span>
                 </div>
+
                 <div className="thumbnail absolute lg:bottom-[50px] bottom-4 left-[50%]">
                     {projects.map((project, index) => (
                         <div

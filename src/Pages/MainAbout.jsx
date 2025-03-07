@@ -78,7 +78,7 @@ const MainAbout = () => {
                     {/* Overlay Text */}
                     <div className="absolute top-1/2 left-10 md:left-[200px] transform -translate-y-1/2">
                         <h1 className="font-bold text-[28px] md:text-[44px] text-white">
-                            About Our Art
+                            About Our Craft
                         </h1>
                     </div>
                 </div>
@@ -103,9 +103,9 @@ const MainAbout = () => {
                         </h2>
                         <p className="mt-4 text-[#666C89] text-sm lg:text-[16px] leading-relaxed">
                             FFL Water Features, established in August 2020, is a Ghanaian-owned company and a branch of Fin Fins Limited, founded in February 2016. Based in Dansoman, we specialize in designing and building water features for both corporate institutions and private residences.
-                            We are committed to excellence, delivering top-tier craftsmanship and service.
                         </p>
                         <p className="mt-4 text-[#666C89] text-sm lg:text-[16px] leading-relaxed">
+                            We are committed to excellence, delivering top-tier craftsmanship and service.
                             Our portfolio showcases our dedication to quality, precision, and attention to detail. Having worked with world-class hospitality resorts, educational institutions, corporate organizations, and heads of state, we continue to set the standard for professionalism and customer-focused solutions.                        </p>
                     </div>
                 </div>
@@ -143,7 +143,7 @@ const MainAbout = () => {
                             <img src={main3} alt='about' loading='lazy' className='object-cover w-full h-full absolute inset-0' />
                             <div className='absolute inset-0 w-full flex'>
                                 <div className='flex flex-col flex-1 pl-6 py-4'>
-                                    <h2 className='text-[27px] font-bold text-[#475569]'>OUR AFFILIATIONS</h2>
+                                    <h2 className='text-[27px] font-bold text-[#475569]'>Our Affiliations</h2>
                                     <p className='text-[#0F172A] w-[350px]'>
                                         We are proud members of the elite Certified Aquascape Contractors (CAC) group, the world’s largest network of pond builders. As the first and only Certified Aquascape Contractors in Africa, we have undergone extensive training in pond construction and business management through Aquascape Inc. in the USA, ensuring top-tier expertise in every project we undertake.                                    </p>
                                 </div>
@@ -158,7 +158,7 @@ const MainAbout = () => {
 
             <section id='team' className="bg-white lg:px-[200px] px-4 h-screen">
                 <div className="w-full max-w-[1100px] mx-auto text-center p-8 rounded-lg">
-                    <h2 className="text-3xl font-bold text-gray-900 mt-[80px] mb-5">Meet Expert Team</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 mt-[80px] mb-5">Meet The Team</h2>
 
                     <div className="flex flex-col lg:flex-row justify-between gap-8">
                         {teamMembers.map((member, index) => (
@@ -190,7 +190,7 @@ const MainAbout = () => {
 
             <section id="price" className="h-screen flex justify-center items-center bg-white">
                 <div className="flex flex-col items-center w-full">
-                    <h2 className="text-2xl font-semibold text-black mb-6">Our Best Pricing</h2>
+                    <h2 className="text-2xl font-semibold text-black mb-6">Pricing</h2>
                     <div className="grid md:grid-cols-3 gap-6 w-full max-w-4xl">
                         {/* Basic Plan */}
                         <div className="p-6 h-full shadow-lg bg-[#F4F4F4] flex flex-col justify-between transform transition-transform duration-300 hover:scale-105">
@@ -316,7 +316,8 @@ const MainAbout = () => {
                         {/* Call Us Box */}
                         <div className="w-full lg:w-[400px] mt-10 lg:mt-28">
                             <div className="bg-[#091242] text-white p-8 shadow-lg font-medium">
-                                <h3 className="text-xl font-semibold mb-4">You Have Any Question?</h3>
+                                <h3 className="text-xl font-semibold mb-4">Have More Questions?
+                                </h3>
                                 <p className="text-lg font-medium">Call Us</p>
                                 <div className="flex items-center gap-3 mt-3 ">
                                     <div className='flex items-center justify-center bg-[#2D3A7B] h-10 w-10 rounded-full border-white'>

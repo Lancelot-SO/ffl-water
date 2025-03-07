@@ -37,15 +37,15 @@ const Projects = () => {
                     {/* Wrap all elements inside a motion.div to enable staggerChildren */}
                     <motion.div variants={containerVariants} initial="hidden" animate="visible">
                         <motion.h1 className="text-[52px] font-bold" variants={textVariants}>
-                            Projects
+                            PROJECTS
                         </motion.h1>
-
+                        {/* 
                         <motion.span className="text-[25px] font-semibold" variants={textVariants}>
                             AT FFL WATER FEATURES
-                        </motion.span>
+                        </motion.span> */}
 
                         <motion.p className="w-[900px] h-[168px]" variants={textVariants}>
-                            At FFL Water Features, we take pride in crafting stunning, high-quality water features with precision and care. Our work speaks for itself, showcasing our dedication to detail and excellence. Whether you’re dreaming of a fountain, waterfall, or pond in Accra or nearby areas, we’re here to make it happen. Let’s create a beautiful, serene space tailored to your vision.
+                            We take pride in crafting stunning, high-quality water features with precision and care. Our work speaks for itself, showcasing our dedication to detail and excellence. Whether you’re dreaming of a fountain, waterfall, or pond in Accra or nearby areas, we’re here to make it happen. Let’s create a beautiful, serene space tailored to your vision.
                         </motion.p>
 
                         {/* Slide-in Button */}

@@ -49,7 +49,7 @@ const PictureSlider = () => {
                             <img src={img} alt={`Slide ${index + 1}`} loading="lazy" />
                             <div className="content">
                                 <div className="author">FFL WATER FEATURES</div>
-                                <div className="title">We put water life into your space</div>
+                                <div className="title">Pouring Life Into Your Space</div>
                                 <div className="des w-[300px] lg:w-[570px]">
                                     {descriptions[index]}
                                 </div>

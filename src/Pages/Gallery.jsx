@@ -44,14 +44,14 @@ const Gallery = () => {
 
             {/* Header Section */}
             <div className="absolute top-[40%] left-[200px] flex flex-col text-white">
-                <h1 className="text-[52px] font-bold">Our Gallery</h1>
+                <h1 className="text-[52px] font-bold">OUR GALLERY</h1>
                 <div className="bg-white w-16 h-2 mb-4"></div>
                 <span className="text-[16px]">All our artworks in one place</span>
             </div>
 
             {/* Gallery Grid with Smooth Slide Animation */}
             <div className="absolute top-[15%] lg:left-[600px] lg:w-[731px] lg:h-[500px] h-auto
-                            bg-white/10 backdrop-blur-[5px] border border-white/20 
+                            bg-black/50 backdrop-blur-[5px] border border-white/20 
                             shadow-lg rounded-xl p-5 flex justify-center items-center transition-all overflow-hidden">
                 <AnimatePresence mode="wait">
                     <motion.div
