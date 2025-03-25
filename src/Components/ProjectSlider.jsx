@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import './Projects.css';
-import img1 from "../assets/pictureslider/ffl1.png";
-import img2 from "../assets/pictureslider/ffl2.jpg";
-import img3 from "../assets/pictureslider/ffl3.png";
-import img4 from "../assets/pictureslider/ffl4.jpg";
+import img1 from "../assets/pictureslider/hyde.jpg";
+import img2 from "../assets/pictureslider/svr.jpg";
+import img3 from "../assets/pictureslider/saltpond.jpg";
+import img4 from "../assets/pictureslider/asr.jpg";
 import frame from "../assets/project/blackframe.png";
 
 const projects = [
@@ -26,8 +26,8 @@ const projects = [
     },
     {
         image: img2,
-        name: "THE SVR POND",
-        author: "THE SVR POND",
+        name: "THE SVR Restaurant",
+        author: "THE SVR Restaurant",
         price: "$50,000",
         description: "A stunningly designed pond set in a peaceful retreat, The SVR Pond blends unique water features with lush greenery to create a serene escape. Built with a sustainable approach, this ecosystem pond enhances its surroundings while promoting natural balance.",
         details: [
@@ -132,7 +132,7 @@ const ProjectSlider = () => {
                         >
                             <img src={project.image} alt={`Thumbnail ${index + 1}`} loading='lazy' />
                             <div className="content">
-                                <div className="title">{project.name}</div>
+                                <div className="title bg-black/50 text-[13px] ">{project.name}</div>
                             </div>
                         </div>
                     ))}

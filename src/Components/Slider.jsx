@@ -79,7 +79,7 @@ const Slider = () => {
                             setActiveSlide(index);
                         }}
                     >
-                        <h1>{slide.title}</h1>
+                        <h1 className='bg-black/70 h-[40px] px-4'>{slide.title}</h1>
                         <img src={slide.imgSrc} alt={slide.title} loading='lazy' />
                     </div>
                 ))

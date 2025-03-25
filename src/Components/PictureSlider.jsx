@@ -7,7 +7,7 @@ import img3 from "../assets/pictureslider/ffl3.png";
 import img4 from "../assets/pictureslider/ffl4.jpg";
 import cert from "../assets/pictureslider/caclogo.png";
 
-const images = [img1, img2, img3, img4];
+const images = [img3, img2, img1, img4];
 const thumbnailNames = ["Fountains", "Streams", "Ponds", "Waterfalls"];
 const descriptions = [
     "Add a touch of drama, elegance, or tranquility with a custom water fountain. Whether you want a bold statement piece or a serene accent, we’ve got you covered. From indoor to garden, sprouting to disappearing, we consult, install, and maintain so you can sit back and enjoy the flow.",
