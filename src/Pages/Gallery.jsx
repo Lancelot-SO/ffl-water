@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import gallerybg from "../assets/gallery/gallery.png";
+//fountain
 import Image1 from "../assets/gallery/img1.jpg";
 import Image2 from "../assets/gallery/img2.jpg";
 import Image3 from "../assets/gallery/img3.jpg";
@@ -12,6 +13,52 @@ import Image6 from "../assets/gallery/img6.jpg";
 import Image7 from "../assets/gallery/img7.jpg";
 import Image8 from "../assets/gallery/img8.jpg";
 import Image9 from "../assets/gallery/img9.jpg";
+import Image10 from "../assets/gallery/img10.jpg";
+import Image11 from "../assets/gallery/img11.jpg";
+import Image12 from "../assets/gallery/img12.jpg";
+
+//Pond
+import Image13 from "../assets/gallery/img13.jpg";
+import Image14 from "../assets/gallery/img14.jpg";
+import Image15 from "../assets/gallery/img15.jpg";
+import Image16 from "../assets/gallery/img16.jpg";
+import Image17 from "../assets/gallery/img17.jpg";
+import Image18 from "../assets/gallery/img18.jpg";
+import Image19 from "../assets/gallery/img19.jpg";
+import Image20 from "../assets/gallery/img20.jpg";
+import Image21 from "../assets/gallery/img21.jpg";
+import Image22 from "../assets/gallery/img22.jpg";
+import Image23 from "../assets/gallery/img23.jpg";
+import Image24 from "../assets/gallery/img24.jpg";
+
+//stream
+import Image25 from "../assets/gallery/img25.jpg";
+import Image26 from "../assets/gallery/img26.jpg";
+import Image27 from "../assets/gallery/img27.jpg";
+import Image28 from "../assets/gallery/img28.jpg";
+import Image29 from "../assets/gallery/img29.jpg";
+import Image30 from "../assets/gallery/img30.jpg";
+import Image31 from "../assets/gallery/img31.jpg";
+import Image32 from "../assets/gallery/img32.jpg";
+import Image33 from "../assets/gallery/img33.jpg";
+import Image34 from "../assets/gallery/img34.jpg";
+import Image35 from "../assets/gallery/img35.jpg";
+import Image36 from "../assets/gallery/img36.jpg";
+
+//others
+import Image37 from "../assets/gallery/img37.jpg";
+import Image38 from "../assets/gallery/img38.jpg";
+import Image39 from "../assets/gallery/img39.jpg";
+import Image40 from "../assets/gallery/img40.jpg";
+import Image41 from "../assets/gallery/img41.jpg";
+import Image42 from "../assets/gallery/img42.jpg";
+import Image43 from "../assets/gallery/img43.jpg";
+import Image44 from "../assets/gallery/img44.jpg";
+import Image45 from "../assets/gallery/img45.jpg";
+import Image46 from "../assets/gallery/img46.jpg";
+import Image47 from "../assets/gallery/img47.jpg";
+import Image48 from "../assets/gallery/img48.jpg";
+
 
 const Gallery = () => {
     const [activeCategory, setActiveCategory] = useState("Fountains");
@@ -20,10 +67,10 @@ const Gallery = () => {
 
     // Image categories
     const categories = {
-        Fountains: [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image1, Image2, Image3],
-        Ponds: [Image4, Image5, Image6, Image7, Image8, Image9, Image1, Image2, Image3, Image1, Image2, Image3],
-        Streams: [Image7, Image8, Image9, Image1, Image2, Image3, Image4, Image5, Image6, Image1, Image2, Image3],
-        Others: [Image9, Image6, Image3, Image1, Image2, Image3, Image4, Image5, Image6, Image1, Image2, Image3]
+        Fountains: [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10, Image11, Image12],
+        Ponds: [Image13, Image14, Image15, Image16, Image17, Image18, Image19, Image20, Image21, Image22, Image23, Image24],
+        Streams: [Image25, Image26, Image27, Image28, Image29, Image30, Image31, Image32, Image33, Image34, Image35, Image36],
+        Others: [Image37, Image38, Image39, Image40, Image41, Image42, Image43, Image44, Image45, Image46, Image47, Image48]
     };
 
     const images = categories[activeCategory];
