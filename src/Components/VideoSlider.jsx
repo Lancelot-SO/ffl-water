@@ -7,6 +7,9 @@ import video3 from "../assets/pictureslider/vid3.mp4";
 import video4 from "../assets/pictureslider/vid4.mp4";
 import cert from "../assets/pictureslider/caclogo.png";
 
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+
 const videos = [video1, video2, video3, video4];
 const thumbnailNames = ["Fountains", "Streams", "Ponds", "Waterfalls"];
 const descriptions = [
@@ -103,9 +106,19 @@ const VideoSlider = () => {
                 </div>
 
                 {/* Navigation Arrows */}
-                <div className="arrows">
+                <div className="arrows hidden">
                     <button onClick={prevSlide}>&lt;</button>
                     <button onClick={nextSlide}>&gt;</button>
+                </div>
+
+                {/* Social Media Icons */}
+                <div className="fixed lg:bottom-10 bottom-14 left-10 z-50">
+                    <div className="space-x-4 flex gap-2">
+                        <a href="#"><FaFacebook className="text-white text-xl hover:text-[#f1683a]" /></a>
+                        <a href="#"><FaXTwitter className="text-white text-xl hover:text-[#f1683a]" /></a>
+                        <a href="#"><FaLinkedin className="text-white text-xl hover:text-[#f1683a]" /></a>
+                        <a href="#"><FaInstagram className="text-white text-xl hover:text-[#f1683a]" /></a>
+                    </div>
                 </div>
             </div>
         </div>

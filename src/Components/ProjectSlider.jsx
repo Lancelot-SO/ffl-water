@@ -89,8 +89,8 @@ const ProjectSlider = () => {
     return (
         <div className="overflow-x-hidden relative">
             <div className="main-carousel">
-                <img src={frame} alt='project' className='absolute top-32 z-40' />
-                <div className='project-name absolute top-[300px] left-[180px] z-50'>
+                <img src={frame} alt='project' className='absolute hidden lg:block top-32 z-40' />
+                <div className='project-name absolute hidden lg:flex top-[300px] left-[180px] z-50'>
                     <ul className='flex flex-col'>
                         {projects.map((project, index) => (
                             <li
@@ -118,7 +118,7 @@ const ProjectSlider = () => {
                         </div>
                     ))}
                 </div>
-                <div className="absolute bottom-[300px] right-[100px] w-[200px] h-[90px] bg-black/20 backdrop-blur-md rounded-xl shadow-lg border border-white/30 flex flex-col items-center justify-center z-50 p-4">
+                <div className="absolute lg:bottom-[300px] bottom-16 lg:right-[100px] right-[220px] lg:w-[200px] w-[150px] h-[90px] bg-black/20 backdrop-blur-md rounded-xl shadow-lg border border-white/30 flex flex-col items-center justify-center z-50 p-4">
                     <small className="text-white uppercase text-xs tracking-wider">Starting from</small>
                     <span className="text-white text-3xl font-extrabold">{projects[currentIndex].price}</span>
                 </div>
@@ -137,7 +137,7 @@ const ProjectSlider = () => {
                         </div>
                     ))}
                 </div>
-                <div className="arrows">
+                <div className="arrows hidden">
                     <button onClick={prevSlide}>&lt;</button>
                     <button onClick={nextSlide}>&gt;</button>
                 </div>

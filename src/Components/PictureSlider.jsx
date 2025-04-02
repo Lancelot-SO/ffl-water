@@ -7,6 +7,9 @@ import img3 from "../assets/pictureslider/ffl3.png";
 import img4 from "../assets/pictureslider/ffl4.jpg";
 import cert from "../assets/pictureslider/caclogo.png";
 
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+
 const images = [img3, img2, img1, img4];
 const thumbnailNames = ["Fountains", "Streams", "Ponds", "Waterfalls"];
 const descriptions = [
@@ -96,13 +99,23 @@ const PictureSlider = () => {
                 </div>
 
                 {/* Navigation Arrows */}
-                <div className="arrows">
+                <div className="arrows hidden">
                     <button onClick={prevSlide}>&lt;</button>
                     <button onClick={nextSlide}>&gt;</button>
                 </div>
 
                 {/* Timer */}
                 <div className="time"></div>
+
+                {/* Social Media Icons */}
+                <div className="fixed lg:bottom-10 bottom-14 left-10 z-50">
+                    <div className="space-x-4 flex gap-2">
+                        <a href="#"><FaFacebook className="text-white text-xl hover:text-[#f1683a]" /></a>
+                        <a href="#"><FaXTwitter className="text-white text-xl hover:text-[#f1683a]" /></a>
+                        <a href="#"><FaLinkedin className="text-white text-xl hover:text-[#f1683a]" /></a>
+                        <a href="#"><FaInstagram className="text-white text-xl hover:text-[#f1683a]" /></a>
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import About from './About';
 import Projects from './Projects';
@@ -48,7 +47,7 @@ const Home = () => {
             {/* Scroll Button with Dynamic Arrow */}
             <button
                 onClick={handleNextPage}
-                className="absolute transform -translate-x-1/2 text-white bg-blue-500 px-6 py-3 rounded-full flex items-center 
+                className="absolute transform lg:-translate-x-1/2 left-4 lg:left-[43%] bottom-0 lg:bottom-8 text-white bg-blue-500 px-6 py-3 rounded-full flex items-center 
                            hover:bg-blue-700 transition duration-300 scroll-button"
             >
                 <MdOutlineKeyboardDoubleArrowDown
@@ -60,15 +59,7 @@ const Home = () => {
                             currentPage === "gallery" ? "Go to Contact" : "Back to Home"}
             </button>
 
-            {/* Social Media Icons */}
-            <div className="fixed bottom-10 left-10 z-50">
-                <div className="space-x-4 flex gap-2">
-                    <a href="#"><FaFacebook className="text-white text-xl hover:text-[#f1683a]" /></a>
-                    <a href="#"><FaXTwitter className="text-white text-xl hover:text-[#f1683a]" /></a>
-                    <a href="#"><FaLinkedin className="text-white text-xl hover:text-[#f1683a]" /></a>
-                    <a href="#"><FaInstagram className="text-white text-xl hover:text-[#f1683a]" /></a>
-                </div>
-            </div>
+
         </div>
     );
 };

@@ -33,7 +33,7 @@ const Projects = () => {
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/30"></div>
 
-                <div className="absolute top-[40%] left-[200px] flex flex-col gap-4 text-white">
+                <div className="absolute top-[40%] lg:left-[200px] left-4 flex flex-col gap-4 text-white">
                     {/* Wrap all elements inside a motion.div to enable staggerChildren */}
                     <motion.div variants={containerVariants} initial="hidden" animate="visible">
                         <motion.h1 className="text-[52px] font-bold" variants={textVariants}>
@@ -44,7 +44,7 @@ const Projects = () => {
                             AT FFL WATER FEATURES
                         </motion.span> */}
 
-                        <motion.p className="w-[900px] h-[168px]" variants={textVariants}>
+                        <motion.p className="lg:w-[900px] h-[168px]" variants={textVariants}>
                             We take pride in crafting stunning, high-quality water features with precision and care. Our work speaks for itself, showcasing our dedication to detail and excellence. Whether you’re dreaming of a fountain, waterfall, or pond in Accra or nearby areas, we’re here to make it happen. Let’s create a beautiful, serene space tailored to your vision.
                         </motion.p>
 

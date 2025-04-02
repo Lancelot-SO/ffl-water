@@ -84,16 +84,16 @@ const Gallery = () => {
     };
 
     return (
-        <div className="h-screen w-full relative">
+        <div className="h-screen w-full relative flex flex-col">
             {/* Background Image */}
             <img src={gallerybg} alt="project" loading="lazy" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/30"></div>
 
             {/* Header Section */}
-            <div className="absolute top-[40%] left-[200px] flex flex-col text-white">
-                <h1 className="text-[52px] font-bold">OUR GALLERY</h1>
-                <div className="bg-white w-16 h-2 mb-4"></div>
-                <span className="text-[16px]">All our artworks in one place</span>
+            <div className="absolute lg:top-[40%] top-[10%] lg:left-[200px] left-[43%] flex flex-col text-white">
+                <h1 className="lg:text-[52px] text-[24px] font-bold">OUR GALLERY</h1>
+                <div className="bg-white hidden lg:block w-16 h-2 mb-4"></div>
+                <span className="text-[16px] hidden lg:block">All our artworks in one place</span>
             </div>
 
             {/* Gallery Grid with Smooth Slide Animation */}
@@ -160,15 +160,36 @@ const Gallery = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     >
-                        <motion.div className="relative w-[80%] h-[80%] bg-white rounded-xl overflow-hidden">
-                            <button className="absolute top-4 right-4 text-white bg-black w-10 h-10 rounded-full" onClick={() => setSelectedImage(null)}>X</button>
-                            <button className="absolute top-1/2 left-4 text-white bg-black/50 px-3 py-2 rounded-full" onClick={handlePrev}><FaArrowLeft /></button>
-                            <button className="absolute top-1/2 right-4 text-white bg-black/50 px-3 py-2 rounded-full" onClick={handleNext}><FaArrowRight /></button>
-                            <img src={images[currentIndex]} alt="Selected" loading="lazy" className="w-full h-full object-cover" />
+                        <motion.div className="relative w-full md:w-[80%] h-[80%] bg-white rounded-xl overflow-hidden">
+                            <button
+                                className="absolute top-4 right-4 text-white bg-black w-10 h-10 rounded-full"
+                                onClick={() => setSelectedImage(null)}
+                            >
+                                X
+                            </button>
+                            <button
+                                className="absolute top-1/2 left-4 text-white bg-black/50 px-3 py-2 rounded-full"
+                                onClick={handlePrev}
+                            >
+                                <FaArrowLeft />
+                            </button>
+                            <button
+                                className="absolute top-1/2 right-4 text-white bg-black/50 px-3 py-2 rounded-full"
+                                onClick={handleNext}
+                            >
+                                <FaArrowRight />
+                            </button>
+                            <img
+                                src={images[currentIndex]}
+                                alt="Selected"
+                                loading="lazy"
+                                className="w-full h-full object-cover"
+                            />
                         </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
+
         </div>
     );
 };
