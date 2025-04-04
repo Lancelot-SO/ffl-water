@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import gallerybg from "../assets/gallery/gallery.png";
@@ -59,11 +59,18 @@ import Image46 from "../assets/gallery/img46.jpg";
 import Image47 from "../assets/gallery/img47.jpg";
 import Image48 from "../assets/gallery/img48.jpg";
 
-
 const Gallery = () => {
     const [activeCategory, setActiveCategory] = useState("Fountains");
     const [selectedImage, setSelectedImage] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    // Listen for window resize to update width
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     // Image categories
     const categories = {
@@ -74,13 +81,21 @@ const Gallery = () => {
     };
 
     const images = categories[activeCategory];
+    // Determine if the device is mobile (less than 768px wide)
+    const isMobile = windowWidth < 768;
+    // Use only the first 6 images for mobile devices
+    const displayedImages = isMobile ? images.slice(0, 8) : images;
 
     const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? displayedImages.length - 1 : prevIndex - 1
+        );
     };
 
     const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+        setCurrentIndex((prevIndex) =>
+            prevIndex === displayedImages.length - 1 ? 0 : prevIndex + 1
+        );
     };
 
     return (
@@ -90,14 +105,14 @@ const Gallery = () => {
             <div className="absolute inset-0 bg-black/30"></div>
 
             {/* Header Section */}
-            <div className="absolute lg:top-[40%] top-[10%] lg:left-[200px] left-[43%] flex flex-col text-white">
+            <div className="absolute lg:top-[40%] top-[15%] lg:left-[200px] left-[35%] flex flex-col text-white">
                 <h1 className="lg:text-[52px] text-[24px] font-bold">OUR GALLERY</h1>
                 <div className="bg-white hidden lg:block w-16 h-2 mb-4"></div>
                 <span className="text-[16px] hidden lg:block">All our artworks in one place</span>
             </div>
 
             {/* Gallery Grid with Smooth Slide Animation */}
-            <div className="absolute top-[15%] lg:left-[600px] lg:w-[731px] lg:h-[500px] h-auto
+            <div className="absolute lg:top-[15%] top-[22%] lg:left-[600px] left-4 lg:w-[731px] lg:h-[500px] h-auto
                             bg-black/50 backdrop-blur-[5px] border border-white/20 
                             shadow-lg rounded-xl p-5 flex justify-center items-center transition-all overflow-hidden">
                 <AnimatePresence mode="wait">
@@ -109,7 +124,7 @@ const Gallery = () => {
                         transition={{ duration: 0.5, ease: "easeInOut" }}
                         className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 w-full"
                     >
-                        {images.map((image, index) => (
+                        {displayedImages.map((image, index) => (
                             <div
                                 key={index}
                                 className="relative w-full h-24 md:h-28 lg:h-32 bg-gray-800 rounded-xl overflow-hidden cursor-pointer"
@@ -128,14 +143,17 @@ const Gallery = () => {
             </div>
 
             {/* Category Buttons with Smooth Transition */}
-            <div className="w-[400px] h-[50px] absolute top-[80%] left-[750px]
+            <div className="w-[400px] h-[50px] absolute lg:top-[80%] top-[84%] left-4 lg:left-[750px]
                             bg-white/10 backdrop-blur-[5px] border border-white/20 
                             shadow-lg rounded-[34px] flex flex-shrink-0 gap-5 transition-all 
                             items-center justify-evenly p-2">
                 {Object.keys(categories).map((category) => (
                     <motion.button
                         key={category}
-                        onClick={() => setActiveCategory(category)}
+                        onClick={() => {
+                            setActiveCategory(category);
+                            setCurrentIndex(0); // Reset index when switching categories
+                        }}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.2 }}
@@ -180,7 +198,7 @@ const Gallery = () => {
                                 <FaArrowRight />
                             </button>
                             <img
-                                src={images[currentIndex]}
+                                src={displayedImages[currentIndex]}
                                 alt="Selected"
                                 loading="lazy"
                                 className="w-full h-full object-cover"
@@ -189,7 +207,6 @@ const Gallery = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-
         </div>
     );
 };
