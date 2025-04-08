@@ -50,6 +50,7 @@ const PictureSlider = () => {
                     {images.map((img, index) => (
                         <div key={index} className={`item ${index === currentIndex ? "active" : ""}`}>
                             <img src={img} alt={`Slide ${index + 1}`} loading="lazy" />
+                            {/* <div className="absolute inset-0 z-30 bg-black bg-opacity-50 flex items-center justify-center"></div> */}
                             <div className="content">
                                 <div className="author">FFL WATER FEATURES</div>
                                 <div className="title">Pouring Life Into Your Space</div>

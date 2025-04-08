@@ -67,7 +67,7 @@ const MainAbout = () => {
     return (
         <div>
             <section id='mainabout'>
-                <div className="relative w-full lg:h-screen h-[500px]">
+                <div className="relative w-full h-screen">
                     {/* Background Image */}
                     <img
                         src={aboutbanner}
@@ -76,15 +76,15 @@ const MainAbout = () => {
                     />
 
                     {/* Overlay Text */}
-                    <div className="absolute top-1/2 left-10 md:left-[200px] transform -translate-y-1/2">
-                        <h1 className="font-bold text-[28px] md:text-[44px] text-white">
+                    <div className="absolute top-1/2 left-10 lg:left-[200px] transform -translate-y-1/2">
+                        <h1 className="font-bold text-[44px] text-white">
                             About Our Craft
                         </h1>
                     </div>
                 </div>
             </section>
 
-            <section id='features' className="w-full lg:h-screen h-[800px] items-center justify-center flex bg-white px-6 md:px-[200px] py-10 md:py-14">
+            <section id='features' className="w-full h-screen  items-center justify-center flex bg-white px-6 md:px-[200px] py-10 md:py-14">
                 <div className="flex flex-col md:flex-row w-full max-w-[1100px] mx-auto">
                     {/* Left - Image */}
                     <div className="w-full md:w-1/2 mb-6 md:mb-0">
@@ -98,13 +98,13 @@ const MainAbout = () => {
 
                     {/* Right - Text Content */}
                     <div className="w-full md:w-1/2 flex flex-col justify-center md:pl-10">
-                        <h2 className="text-lg md:text-[30px] lg:w-[355px] w-full font-semibold leading-tight text-[#1C1F35]">
+                        <h2 className="text-[30px] lg:w-[355px] w-full font-semibold leading-tight text-[#1C1F35]">
                             Who We Are
                         </h2>
-                        <p className="mt-4 text-[#666C89] text-sm lg:text-[16px] leading-relaxed">
+                        <p className="mt-4 text-[#666C89] text-[16px] leading-relaxed">
                             FFL Water Features, established in August 2020, is a Ghanaian-owned company and a branch of Fin Fins Limited, founded in February 2016. Based in Dansoman, we specialize in designing and building water features for both corporate institutions and private residences.
                         </p>
-                        <p className="mt-4 text-[#666C89] text-sm lg:text-[16px] leading-relaxed">
+                        <p className="mt-4 text-[#666C89] text-[16px] leading-relaxed">
                             We are committed to excellence, delivering top-tier craftsmanship and service.
                             Our portfolio showcases our dedication to quality, precision, and attention to detail. Having worked with world-class hospitality resorts, educational institutions, corporate organizations, and heads of state, we continue to set the standard for professionalism and customer-focused solutions.                        </p>
                     </div>
@@ -112,7 +112,7 @@ const MainAbout = () => {
             </section>
 
             <section id='forest'>
-                <div className='w-full lg:h-screen h-[800px] relative'>
+                <div className='w-full h-screen relative'>
                     <img src={forest} alt='forest'
                         loading='lazy'
                         className='w-full h-full object-cover' />
@@ -133,22 +133,38 @@ const MainAbout = () => {
                     </div>
                 </div>
             </section>
-            <section id='cert' className='lg:h-screen h-[800px] bg-[#E3F7FC]'>
+            <section id='cert' className='h-screen bg-[#E3F7FC]'>
                 <div className='relative w-full flex flex-col'>
                     {/* Background Image */}
-                    <img src={main2} alt='about' loading='lazy' className='object-cover w-full lg:h-[400px] absolute inset-0' />
+                    <img
+                        src={main2}
+                        alt='about'
+                        loading='lazy'
+                        className='object-cover w-full lg:h-[400px] h-[500px] lg:absolute lg:inset-0'
+                    />
 
-                    <div className='flex w-[800px] h-[300px] absolute top-[340px] left-[350px] bg-white'>
-                        <div className='flex bg-red-500'>
-                            <img src={main3} alt='about' loading='lazy' className='object-cover w-full h-full absolute inset-0' />
-                            <div className='absolute inset-0 w-full flex'>
+                    <div className='flex lg:w-[800px] lg:h-[300px] lg:absolute lg:top-[340px] lg:left-[350px] bg-white mt-10'>
+                        <div className='flex lg:flex-row flex-col-reverse'>
+                            <img
+                                src={main3}
+                                alt='about'
+                                loading='lazy'
+                                className='object-cover w-full h-full lg:absolute lg:inset-0'
+                            />
+                            <div className='lg:absolute lg:inset-0 w-full flex'>
                                 <div className='flex flex-col flex-1 pl-6 py-4'>
                                     <h2 className='text-[27px] font-bold text-[#475569]'>Our Affiliations</h2>
                                     <p className='text-[#0F172A] w-[350px]'>
-                                        We are proud members of the elite Certified Aquascape Contractors (CAC) group, the world’s largest network of pond builders. As the first and only Certified Aquascape Contractors in Africa, we have undergone extensive training in pond construction and business management through Aquascape Inc. in the USA, ensuring top-tier expertise in every project we undertake.                                    </p>
+                                        We are proud members of the elite Certified Aquascape Contractors (CAC) group, the world’s largest network of pond builders. As the first and only Certified Aquascape Contractors in Africa, we have undergone extensive training in pond construction and business management through Aquascape Inc. in the USA, ensuring top-tier expertise in every project we undertake.
+                                    </p>
                                 </div>
-                                <div className='flex flex-1'>
-                                    <img src={main4} alt='main' loading='lazy' className='object-cover' />
+                                <div className='hidden lg:flex flex-1'>
+                                    <img
+                                        src={main4}
+                                        alt='main'
+                                        loading='lazy'
+                                        className='object-cover'
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -156,7 +172,8 @@ const MainAbout = () => {
                 </div>
             </section>
 
-            <section id='team' className="bg-white lg:px-[200px] px-4 h-screen">
+
+            <section id='team' className="bg-white lg:px-[200px] px-4 lg:h-screen h-[1750px]">
                 <div className="w-full max-w-[1100px] mx-auto text-center p-8 rounded-lg">
                     <h2 className="text-3xl font-bold text-gray-900 mt-[80px] mb-5">Meet The Team</h2>
 
