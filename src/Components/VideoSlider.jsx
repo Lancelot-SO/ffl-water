@@ -54,7 +54,8 @@ const VideoSlider = () => {
                                 playsInline
                                 className="video-slide object-cover"
                             />
-                            <div className="content">
+                            <div className="content bg-black/20 backdrop-blur-md rounded-xl p-4
+                            + shadow-lg border border-white/30">
                                 <div className="author">FFL WATER FEATURES</div>
                                 <div className="title">We bring life to your space</div>
                                 <div className="des w-[300px] lg:w-[570px]">

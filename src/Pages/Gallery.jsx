@@ -112,7 +112,7 @@ const Gallery = () => {
             </div>
 
             {/* Gallery Grid with Smooth Slide Animation */}
-            <div className="absolute lg:top-[15%] top-[22%] lg:left-[600px] left-4 lg:w-[731px] lg:h-[500px] h-auto
+            <div className="absolute lg:top-[15%] top-[22%] lg:left-[600px] md:left-0 left-4 lg:w-[731px] md:w-full lg:h-[500px] h-auto
                             bg-black/50 backdrop-blur-[5px] border border-white/20 
                             shadow-lg rounded-xl p-5 flex justify-center items-center transition-all overflow-hidden">
                 <AnimatePresence mode="wait">
@@ -143,7 +143,7 @@ const Gallery = () => {
             </div>
 
             {/* Category Buttons with Smooth Transition */}
-            <div className="w-[400px] h-[50px] absolute lg:top-[80%] top-[84%] left-4 lg:left-[750px]
+            <div className="w-[400px] h-[50px] absolute lg:top-[80%] top-[84%] md:top-[72%] left-4 lg:left-[750px] md:left-[21%]
                             bg-white/10 backdrop-blur-[5px] border border-white/20 
                             shadow-lg rounded-[34px] flex flex-shrink-0 gap-5 transition-all 
                             items-center justify-evenly p-2">

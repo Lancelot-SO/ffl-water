@@ -84,20 +84,20 @@ const MainAbout = () => {
                 </div>
             </section>
 
-            <section id='features' className="w-full h-screen  items-center justify-center flex bg-white px-6 md:px-[200px] py-10 md:py-14">
+            <section id='features' className="w-full h-screen  items-center justify-center flex bg-white px-6 lg:px-[200px] py-10 lg:py-14">
                 <div className="flex flex-col md:flex-row w-full max-w-[1100px] mx-auto">
                     {/* Left - Image */}
-                    <div className="w-full md:w-1/2 mb-6 md:mb-0">
+                    <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
                         <img
                             src={main1}
                             alt="About Us"
-                            className="w-full h-[250px] md:h-[400px] object-cover shadow-sm rounded-lg"
+                            className="w-full h-[250px] lg:h-[400px] object-cover shadow-sm rounded-lg"
                             loading="lazy"
                         />
                     </div>
 
                     {/* Right - Text Content */}
-                    <div className="w-full md:w-1/2 flex flex-col justify-center md:pl-10">
+                    <div className="w-full lg:w-1/2 flex flex-col justify-center md:pl-10">
                         <h2 className="text-[30px] lg:w-[355px] w-full font-semibold leading-tight text-[#1C1F35]">
                             Who We Are
                         </h2>
@@ -158,7 +158,7 @@ const MainAbout = () => {
                                         We are proud members of the elite Certified Aquascape Contractors (CAC) group, the world’s largest network of pond builders. As the first and only Certified Aquascape Contractors in Africa, we have undergone extensive training in pond construction and business management through Aquascape Inc. in the USA, ensuring top-tier expertise in every project we undertake.
                                     </p>
                                 </div>
-                                <div className='hidden lg:flex flex-1'>
+                                <div className='hidden md:flex lg:flex flex-1'>
                                     <img
                                         src={main4}
                                         alt='main'
@@ -174,14 +174,14 @@ const MainAbout = () => {
 
 
             <section id='team' className="bg-white lg:px-[200px] px-4 lg:h-screen h-[1750px]">
-                <div className="w-full max-w-[1100px] mx-auto text-center p-8 rounded-lg">
+                <div className="w-full max-w-[1100px] mx-auto text-center p-8 rounded-lg mt-8">
                     <h2 className="text-3xl font-bold text-gray-900 mt-[80px] mb-5">Meet The Team</h2>
 
-                    <div className="flex flex-col lg:flex-row justify-between gap-8">
+                    {/* Using Grid Instead of Flex for Responsive Layout */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {teamMembers.map((member, index) => (
                             <div key={index}
-                                className="relative lg:h-[500px] bg-white rounded-lg shadow-lg overflow-hidden flex-1 
-                    w-full sm:w-[80%] lg:w-[30%] mx-auto">
+                                className="relative lg:h-[500px] bg-white rounded-lg shadow-lg overflow-hidden mx-auto">
 
                                 {/* Team Member Image */}
                                 <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
@@ -205,7 +205,8 @@ const MainAbout = () => {
                 </div>
             </section>
 
-            <section id="price" className="h-screen flex justify-center items-center bg-white">
+
+            <section id="price" className="h-screen md:mt-5 flex justify-center items-center bg-white">
                 <div className="flex flex-col items-center w-full">
                     <h2 className="text-2xl font-semibold text-black mb-6">Pricing</h2>
                     <div className="grid md:grid-cols-3 gap-6 w-full max-w-4xl">

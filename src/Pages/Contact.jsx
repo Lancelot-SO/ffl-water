@@ -25,7 +25,7 @@ const Contact = () => {
             <img src={contactbg} alt='contact' loading='lazy' className='w-full h-full object-cover' />
             <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
 
-            <div className='absolute w-full lg:top-[350px] top-[90px] flex lg:flex-row flex-col lg:items-center justify-between text-white lg:px-24 px-4 gap-6'>
+            <div className='absolute w-full lg:top-[350px] top-[90px] flex lg:flex-row flex-col lg:items-center justify-between text-white lg:px-24 md:px-20 px-4 gap-6 lg:gap-6 md:gap-10'>
                 {/* Left Section */}
                 <div className='flex flex-col lg:gap-6 gap-0'>
                     <motion.div initial='hidden' animate='visible' custom={0} variants={fadeUpVariants}>

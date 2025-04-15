@@ -45,7 +45,9 @@ const Projects = () => {
                         </motion.span> */}
 
                         <motion.p className="lg:w-[900px] h-[168px]" variants={textVariants}>
-                            We take pride in crafting stunning, high-quality water features with precision and care. Our work speaks for itself, showcasing our dedication to detail and excellence. Whether you’re dreaming of a fountain, waterfall, or pond in Accra or nearby areas, we’re here to make it happen. Let’s create a beautiful, serene space tailored to your vision.
+                            We take pride in crafting stunning, high-quality water features with precision and care. Our work speaks for itself,
+                            showcasing our dedication to detail and excellence. Whether you’re dreaming of a fountain, waterfall, or pond in Accra or nearby areas,
+                            we’re here to make it happen. Let’s create a beautiful, serene space tailored to your vision.
                         </motion.p>
 
                         {/* Slide-in Button */}

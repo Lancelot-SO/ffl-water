@@ -26,9 +26,9 @@ const About = () => {
                                 className="absolute inset-0 object-cover w-full h-full" />
 
                             {/* Glass Container */}
-                            <div className="absolute top-[20%] lg:left-[200px] lg:w-[1130px] lg:h-[410px] h-[1250px]
+                            <div className="absolute top-[20%] lg:left-[200px] lg:w-[1130px] lg:h-[410px] h-[1250px] md:h-[500px]
                                             bg-black/50 backdrop-blur-[5px] border border-white/20 
-                                            shadow-lg rounded-xl flex lg:flex-row flex-col flex-shrink-0 gap-5 transition-all">
+                                            shadow-lg rounded-xl flex lg:flex-row flex-col flex-shrink-0 gap-5  transition-all">
 
                                 {/* Red Section */}
                                 <div className="flex flex-col lg:w-[500px] h-full p-5 items-start justify-center">
