@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import "./Global.css";
-import logo from "../assets/navbar/fflogo.png";
+import logo from "../assets/navbar/fflogo1.png";
 import { FaBars } from 'react-icons/fa';
 import cloud1 from "../assets/navbar/cloud1.png";
 import cloud2 from "../assets/navbar/cloud2.png";
