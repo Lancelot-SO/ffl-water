@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import './PictureSlider.css';
 import img1 from "../assets/pictureslider/ffl1.png";
-import img2 from "../assets/pictureslider/ffl2.jpg";
+import img2 from "../assets/pictureslider/ffl2.png";
 import img3 from "../assets/pictureslider/ffl3.png";
-import img4 from "../assets/pictureslider/ffl4.jpg";
+import img4 from "../assets/pictureslider/ffl4.png";
 import cert from "../assets/pictureslider/caclogo.png";
 
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
