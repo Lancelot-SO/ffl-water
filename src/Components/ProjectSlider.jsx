@@ -12,7 +12,7 @@ const projects = [
         image: img1,
         name: "THE HYDE - KITASI",
         author: "THE HYDE - KITASI",
-        price: "$22,000",
+        price: "$22,000 - $30,000",
         description: "Nestled in the Akwapim mountain range, The Hyde is a family countryside retreat designed for hosting loved ones in a serene, nature-filled escape. Overlooking the mountains, this tranquil space features a stunning ecosystem pond, lush gardens, a pool, and a spa, all crafted to rejuvenate visitors. It also serves as a personal art gallery for the owner, an avid art enthusiast, showcasing a collection of unique pieces.",
         details: [
             "Size: 22’ x 14’ pond with a 14’ stream",
@@ -28,7 +28,7 @@ const projects = [
         image: img2,
         name: "THE SVR Restaurant",
         author: "THE SVR Restaurant",
-        price: "$50,000",
+        price: "$50,000 - $60,000",
         description: "A stunningly designed pond set in a peaceful retreat, The SVR Pond blends unique water features with lush greenery to create a serene escape. Built with a sustainable approach, this ecosystem pond enhances its surroundings while promoting natural balance.",
         details: [
             "Size: 20’ x 12’",
@@ -43,7 +43,7 @@ const projects = [
         image: img3,
         name: "THE AKYEMFO POND",
         author: "THE AKYEMFO POND",
-        price: "$70,000",
+        price: "$70,000 - $80,000",
         description: "A beautifully crafted water feature seamlessly blending into its natural surroundings, The Akyemfo Pond enhances biodiversity while maintaining ecological balance. Designed with sustainable materials and a contemporary touch, it brings both beauty and harmony to the landscape.",
         details: [
             "Size: 18’ x 10’",
@@ -57,7 +57,7 @@ const projects = [
         image: img4,
         name: "THE ASR POND",
         author: "THE ASR POND",
-        price: "$90,000",
+        price: "$90,000 - $100,000",
         description: "A modern, seamlessly integrated pond that transforms any space into a peaceful oasis. With a cascading waterfall and flowing streams, The ASR Pond creates a soothing ambiance with both visual and auditory appeal.",
         details: [
             "Size: 25’ x 15’ with a waterfall",
@@ -119,8 +119,8 @@ const ProjectSlider = () => {
                     ))}
                 </div>
                 <div className="absolute lg:bottom-[300px] bottom-16 lg:right-[100px] right-[220px] lg:w-[200px] w-[150px] h-[90px] bg-black/20 backdrop-blur-md rounded-xl shadow-lg border border-white/30 flex flex-col items-center justify-center z-50 p-4">
-                    <small className="text-white uppercase text-xs tracking-wider">Starting from</small>
-                    <span className="text-white text-3xl font-extrabold">{projects[currentIndex].price}</span>
+                    <small className="text-white uppercase text-xs tracking-wider">Ranging from</small>
+                    <span className="text-white text-[17px] font-extrabold">{projects[currentIndex].price}</span>
                 </div>
 
                 <div className="thumbnail absolute lg:bottom-[50px] bottom-4 left-[50%]">
