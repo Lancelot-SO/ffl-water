@@ -88,6 +88,13 @@
     color: #eee;
 }
 
+.project-details {
+    display: flex;
+    flex-direction: column;
+    width: 740px;
+    height: 200px;
+}
+
 /* thumbnail */
 .thumbnail {
     width: max-slide-content;
