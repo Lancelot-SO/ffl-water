@@ -44,6 +44,9 @@
 
 .des {
     width: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .carousel .list .item .author {
@@ -106,7 +109,7 @@
 
 /* Arrows */
 .arrows {
-    position: absolute;
+    /* position: absolute;
     top: 80%;
     right: 52%;
     z-index: 100;
@@ -114,11 +117,12 @@
     max-width: 30%;
     display: flex;
     gap: 10px;
-    align-items: center;
+    align-items: center; */
+    display: none;
 }
 
 .arrows button {
-    width: 40px;
+    /* width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: #eee4;
@@ -126,12 +130,14 @@
     color: #fff;
     font-family: monospace;
     font-weight: bold;
-    transition: 0.5s;
+    transition: 0.5s; */
+    border: none;
 }
 
 .arrows button:hover {
+    /* background-color: #fff;
+    color: #000; */
     background-color: #fff;
-    color: #000;
 }
 
 /* Disable button clicks during animation */
@@ -170,15 +176,55 @@
 @media screen and (max-width: 678px) {
     .carousel .list .item .content {
         padding-right: 0;
-        left: 50%;
+        left: 55%;
     }
 
     .carousel .list .item .content {
-        top: 10%;
+        top: 15%;
     }
 
     .carousel .list .item .content .title {
         font-size: 30px;
+    }
+
+    .thumbnail {
+        display: none;
+    }
+
+    /* Arrows */
+    .arrows {
+        position: absolute;
+        top: 80%;
+        right: 10%;
+        z-index: 100;
+        width: 300px;
+        max-width: 30%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .arrows button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #3b82f6;
+        border: none;
+        color: #fff;
+        font-family: monospace;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+
+    .arrows button:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /* Disable button clicks during animation */
+    .carousel.next .arrows button,
+    .carousel.prev .arrows button {
+        pointer-events: none;
     }
 }
 
@@ -186,11 +232,11 @@
 @media screen and (max-width: 768px) {
     .carousel .list .item .content {
         padding-right: 0;
-        left: 50%;
+        left: 55%;
     }
 
     .carousel .list .item .content {
-        top: 20%;
+        top: 15%;
         width: 82vw;
     }
 

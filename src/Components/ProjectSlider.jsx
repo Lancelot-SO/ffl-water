@@ -109,9 +109,9 @@ const ProjectSlider = () => {
                             <img src={project.image} alt={project.name} loading='lazy' />
                             <div className="slide-content">
                                 <div className="author">{project.author}</div>
-                                <div className="description w-[300px] lg:w-[600px]">{project.description}</div>
+                                <div className="description w-full lg:w-[600px]">{project.description}</div>
                                 <p className='font-bold w-[200px]'>Project Details:</p>
-                                <ul className='project-details'>
+                                <ul className='project-details '>
                                     {project.details.map((detail, i) => (
                                         <li key={i}>{detail}</li>
                                     ))}
@@ -122,20 +122,20 @@ const ProjectSlider = () => {
                 </div>
                 {/* Get A Quote box */}
                 <div
-                    className="absolute lg:bottom-[300px] bottom-16 lg:right-[100px] right-[220px]
-                     lg:w-[200px] w-[150px] h-[90px]
-                     bg-black/20 backdrop-blur-md rounded-xl shadow-lg
+                    className="absolute lg:bottom-[300px] bottom-32 lg:right-[100px] right-[190px]
+                     lg:w-[200px] w-[210px] h-[90px]
+                     bg-black/50 backdrop-blur-md rounded-xl shadow-lg
                      border border-white/30 flex flex-col
                      items-center justify-center z-50 p-4 cursor-pointer"
                     onClick={() => setQuoteOpen(true)}   // <— open modal
                 >
-                    <small className="text-white uppercase text-xs tracking-wider">
+                    <small className="text-white font-bold uppercase text-xs tracking-wider">
                         Ranging from
                     </small>
                     <span className="text-white text-[17px] font-extrabold">
                         {projects[currentIndex].price}
                     </span>
-                    <h4 className="text-white mt-1">Get A Quote</h4>
+                    <h4 className="text-white font-bold mt-1">Get A Quote</h4>
                 </div>
 
                 <div className="thumbnail absolute lg:bottom-[50px] bottom-4 left-[50%]">
@@ -152,7 +152,7 @@ const ProjectSlider = () => {
                         </div>
                     ))}
                 </div>
-                <div className="arrows hidden">
+                <div className="arrows">
                     <button onClick={prevSlide}>&lt;</button>
                     <button onClick={nextSlide}>&gt;</button>
                 </div>

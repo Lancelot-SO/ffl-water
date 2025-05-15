@@ -85,38 +85,42 @@ const Home = () => {
             {/* Next Page Button (Blue) */}
             <button
                 onClick={handleNextPage}
-                className="absolute transform lg:-translate-x-1/2 left-4 lg:left-[43%] bottom-0 lg:bottom-8 text-white bg-blue-500 px-6 py-3 rounded-full flex items-center hover:bg-blue-700 transition duration-300 scroll-button"
+                className="absolute transform lg:-translate-x-1/2 left-[40%] lg:left-[43%] bottom-2 lg:bottom-8 text-white bg-blue-500 px-6 py-3 rounded-full flex items-center hover:bg-blue-700 transition duration-300 scroll-button"
             >
                 <MdOutlineKeyboardDoubleArrowDown
-                    className={`text-2xl mr-2 animate-bounce transition-transform duration-300 ${currentPage === "contact" ? "rotate-180" : ""}`}
+                    className={`text-2xl mr-0 lg:mr-2 animate-bounce transition-transform duration-300 ${currentPage === "contact" ? "rotate-180" : ""}`}
                 />
-                {currentPage === "hero"
-                    ? "Go to About Us"
-                    : currentPage === "about"
-                        ? "Go to Projects"
-                        : currentPage === "projects"
-                            ? "Go to Gallery"
-                            : currentPage === "gallery"
-                                ? "Go to Contact"
-                                : "Back to Home"}
+                <div className='hidden lg:block'>
+                    {currentPage === "hero"
+                        ? "Go to About Us"
+                        : currentPage === "about"
+                            ? "Go to Projects"
+                            : currentPage === "projects"
+                                ? "Go to Gallery"
+                                : currentPage === "gallery"
+                                    ? "Go to Contact"
+                                    : "Back to Home"}
+                </div>
             </button>
 
             {/* Back Button (Green) – Shown only when not on the hero (home) page */}
             {currentPage !== "hero" && (
                 <button
                     onClick={handlePreviousPage}
-                    className="absolute transform left-4 lg:left-[3%] top-24 lg:top-[90px] text-white bg-blue-500 px-6 py-3 rounded-full flex items-center hover:bg-blue-700 transition duration-300"
+                    className="absolute transform left-4 lg:left-[3%] top-24 lg:top-[90px] text-white bg-blue-600 px-6 py-3 rounded-full flex items-center hover:bg-blue-700 transition duration-300"
                 >
                     <MdOutlineKeyboardDoubleArrowDown className="text-2xl mr-2 rotate-90" />
-                    {currentPage === "about"
-                        ? "Back to Home"
-                        : currentPage === "projects"
-                            ? "Back to About Us"
-                            : currentPage === "gallery"
-                                ? "Back to Projects"
-                                : currentPage === "contact"
-                                    ? "Back to Gallery"
-                                    : ""}
+                    <div className='hidden lg:block'>
+                        {currentPage === "about"
+                            ? "Back to Home"
+                            : currentPage === "projects"
+                                ? "Back to About Us"
+                                : currentPage === "gallery"
+                                    ? "Back to Projects"
+                                    : currentPage === "contact"
+                                        ? "Back to Gallery"
+                                        : ""}
+                    </div>
                 </button>
             )}
         </div>

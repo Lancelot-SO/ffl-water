@@ -15,7 +15,7 @@ const thumbnailNames = ["Fountains", "Streams", "Ponds", "Waterfalls"];
 const descriptions = [
     "Add a touch of drama, elegance, or tranquility with a custom water fountain. Whether you want a bold statement piece or a serene accent, we’ve got you covered. From indoor to garden, sprouting to disappearing, we consult, install, and maintain so you can sit back and enjoy the flow.",
     "The gentle flow of water brings peace and movement to any space. Whether trickling into a pond or vanishing into a hidden feature, our custom streams create a serene, natural atmosphere. We handle design, installation, and maintenance, crafting one-of-a-kind water features that keep your home or business flowing effortlessly.",
-    "We pride ourselves in our expert installation and maintenance of various ponds. We provide consultation services as well as installation and maintenance of various ponds such as; concrete ponds, ecosystem ponds, commercial and private fish ponds, pondless water features and ornamental decorative fish ponds. From tranquil backyard escapes to large commercial fish ponds, we create and care for stunning water features. Our expert team handles everything from consultation to installation and maintenance, ensuring your pond stays beautiful, functional and thriving for years.",
+    "We pride ourselves in our expert installation and maintenance of various ponds. We provide consultation services as well as installation and maintenance of various ponds such as; concrete ponds, ecosystem ponds, commercial and private fish ponds, pondless water features and ornamental decorative fish ponds. From tranquil backyard escapes to large commercial fish ponds, we create and care for stunning water features.",
     "Bring the beauty of a majestic waterfall to your space with our expert artificial waterfall installations. Whether indoors or outdoors, we create stunning, natural-looking waterfalls that transform any lawn, garden, or business into a serene retreat."
 ];
 
@@ -51,11 +51,11 @@ const PictureSlider = () => {
                         <div key={index} className={`item ${index === currentIndex ? "active" : ""}`}>
                             <img src={img} alt={`Slide ${index + 1}`} loading="lazy" />
                             {/* <div className="absolute inset-0 z-30 bg-black bg-opacity-50 flex items-center justify-center"></div> */}
-                            <div className="content bg-black/20 backdrop-blur-md rounded-xl p-4
-                            + shadow-lg border border-white/30">
+                            <div className="content bg-black/50 backdrop-blur-md rounded-xl p-4
+                            + shadow-lg border-4 border-white/40">
                                 <div className="author">FFL WATER FEATURES</div>
                                 <div className="title">Pouring Life Into Your Space</div>
-                                <div className="des w-[300px] lg:w-[570px]">
+                                <div className="des w-full lg:w-[570px] pr-4 lg:pr-0">
                                     {descriptions[index]}
                                 </div>
                                 <div className="flex items-center lg:p-4 p-0 w-full max-w-md">
@@ -101,7 +101,7 @@ const PictureSlider = () => {
                 </div>
 
                 {/* Navigation Arrows */}
-                <div className="arrows hidden">
+                <div className="arrows">
                     <button onClick={prevSlide}>&lt;</button>
                     <button onClick={nextSlide}>&gt;</button>
                 </div>
@@ -110,12 +110,12 @@ const PictureSlider = () => {
                 <div className="time"></div>
 
                 {/* Social Media Icons */}
-                <div className="fixed lg:bottom-10 bottom-14 left-10 z-50">
+                <div className="fixed lg:bottom-10 bottom-20 left-10 z-50">
                     <div className="space-x-4 flex gap-2">
-                        <a href="#"><FaFacebook className="text-white text-xl hover:text-[#f1683a]" /></a>
-                        <a href="#"><FaXTwitter className="text-white text-xl hover:text-[#f1683a]" /></a>
-                        <a href="#"><FaLinkedin className="text-white text-xl hover:text-[#f1683a]" /></a>
-                        <a href="#"><FaInstagram className="text-white text-xl hover:text-[#f1683a]" /></a>
+                        <a href="#"><FaFacebook className="text-white text-xl hover:text-blue-600" /></a>
+                        <a href="#"><FaXTwitter className="text-white text-xl hover:text-blue-600" /></a>
+                        <a href="#"><FaLinkedin className="text-white text-xl hover:text-blue-600" /></a>
+                        <a href="#"><FaInstagram className="text-white text-xl hover:text-blue-600" /></a>
                     </div>
                 </div>
             </div>

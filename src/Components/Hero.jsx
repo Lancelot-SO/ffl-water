@@ -26,7 +26,7 @@ const Hero = () => {
             </div>
 
             {/* Vertical Toggle Icons (Now inside Hero, not fixed) */}
-            <div className="absolute lg:top-1/2 top-[70%] left-4 lg:left-10 transform -translate-y-1/2 flex flex-col items-center space-y-2 md:space-y-4 z-50">
+            <div className="absolute lg:top-1/2 top-[50%] left-4 lg:left-10 transform -translate-y-1/2 flex flex-col items-center space-y-2 md:space-y-4 z-50">
                 <button onClick={() => handleToggle(false)} className={`p-2 md:p-3 rounded-full transition ${!isVideoMode ? 'bg-white text-black' : 'bg-gray-800 text-white'} shadow-md hover:bg-gray-100`}>
                     <FaImage size={16} className="md:size-[20px] text-[#f1683a]" />
                 </button>

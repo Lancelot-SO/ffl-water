@@ -48,6 +48,9 @@
 
 .description {
     width: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .main-carousel .slide-list .slide-item .author {
@@ -311,6 +314,10 @@
         /* Adjust description width */
         font-size: 16px;
         /* Reduce font size */
+    }
+
+    .project-details {
+        width: 320px;
     }
 
     /* Author and topic */

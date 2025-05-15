@@ -54,11 +54,11 @@ const VideoSlider = () => {
                                 playsInline
                                 className="video-slide object-cover"
                             />
-                            <div className="content bg-black/20 backdrop-blur-md rounded-xl p-4
-                            + shadow-lg border border-white/30">
+                            <div className="content bg-black/50 backdrop-blur-md rounded-xl p-4
+                            + shadow-lg border-4 border-white/30">
                                 <div className="author">FFL WATER FEATURES</div>
                                 <div className="title">We bring life to your space</div>
-                                <div className="des w-[300px] lg:w-[570px]">
+                                <div className="des w-full lg:w-[570px]">
                                     {descriptions[index]}
                                 </div>
                                 <div className="flex items-center p-4 w-full max-w-md">
@@ -107,7 +107,7 @@ const VideoSlider = () => {
                 </div>
 
                 {/* Navigation Arrows */}
-                <div className="arrows hidden">
+                <div className="arrows">
                     <button onClick={prevSlide}>&lt;</button>
                     <button onClick={nextSlide}>&gt;</button>
                 </div>
