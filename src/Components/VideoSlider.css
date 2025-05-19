@@ -175,12 +175,13 @@
 /* Responsive adjustments */
 @media screen and (max-width: 678px) {
     .carousel .list .item .content {
-        padding-right: 0;
+        margin-right: 16px;
         left: 55%;
     }
 
     .carousel .list .item .content {
         top: 15%;
+        margin-right: 10px;
     }
 
     .carousel .list .item .content .title {

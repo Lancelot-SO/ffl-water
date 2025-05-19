@@ -206,7 +206,7 @@ const MainAbout = () => {
             </section>
 
 
-            <section id="price" className="h-screen md:mt-5 flex justify-center items-center bg-white">
+            <section id="price" className="hidden h-screen md:mt-5 flex justify-center items-center bg-white">
                 <div className="flex flex-col items-center w-full">
                     <h2 className="text-2xl font-semibold text-black mb-6">Pricing</h2>
                     <div className="grid md:grid-cols-3 gap-6 w-full max-w-4xl">

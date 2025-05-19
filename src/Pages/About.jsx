@@ -47,7 +47,7 @@ const About = () => {
                                 </div>
 
                                 {/* Yellow Section (Fixed Position) */}
-                                <div className="flex lg:w-[610px] h-full">
+                                <div className="hidden lg:flex lg:w-[610px] h-full">
                                     <Slider />
                                 </div>
                             </div>

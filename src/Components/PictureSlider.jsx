@@ -52,25 +52,26 @@ const PictureSlider = () => {
                             <img src={img} alt={`Slide ${index + 1}`} loading="lazy" />
                             {/* <div className="absolute inset-0 z-30 bg-black bg-opacity-50 flex items-center justify-center"></div> */}
                             <div className="content bg-black/50 backdrop-blur-md rounded-xl p-4
-                            + shadow-lg border-4 border-white/40">
+                            + shadow-lg border-4 border-white/40 mr-4">
                                 <div className="author">FFL WATER FEATURES</div>
                                 <div className="title">Pouring Life Into Your Space</div>
-                                <div className="des w-full lg:w-[570px] pr-4 lg:pr-0">
+                                <div className="des w-full lg:w-[570px] pr-5 lg:pr-0">
                                     {descriptions[index]}
                                 </div>
-                                <div className="flex items-center lg:p-4 p-0 w-full max-w-md">
+                                <div className="flex items-center w-full lg:w-[600px] h-[100px] mt-4">
                                     {/* Left Content */}
-                                    <div className="text-white text-lg font-semibold">
+                                    <div className="flex-2 text-white  text-lg font-semibold">
                                         Certified by Aquascape
                                     </div>
                                     {/* Divider */}
                                     <div className="h-8 w-[1px] bg-white mx-4"></div>
                                     {/* Badge */}
-                                    <div>
+                                    <div className='lg:w-[100px] '>
                                         <img
                                             src={cert}
                                             alt="Aquascape Certified Badge"
-                                            className="w-16 h-16 object-contain"
+                                            className="lg:w-full object-cover"
+                                            loading='lazy'
                                         />
                                     </div>
                                 </div>
