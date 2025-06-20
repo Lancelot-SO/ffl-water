@@ -26,7 +26,7 @@ const About = () => {
                                 className="absolute inset-0 object-cover w-full h-full" />
 
                             {/* Glass Container */}
-                            <div className="absolute top-[20%] lg:left-[200px] lg:w-[1130px] lg:h-[410px] h-[1250px] md:h-[500px]
+                            <div className="absolute top-[20%] lg:left-[200px] lg:w-[1130px] lg:h-[410px] 4xl:h-[505px] large:h-[445px] h-[1250px] md:h-[500px]
                                             bg-black/50 backdrop-blur-[5px] border border-white/20 
                                             shadow-lg rounded-xl flex lg:flex-row flex-col flex-shrink-0 gap-5  transition-all">
 

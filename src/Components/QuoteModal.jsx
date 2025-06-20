@@ -59,7 +59,7 @@ export default function QuoteModal({ open, setOpen }) {
 
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         {/* Left side */}
-                        <div className="bg-gradient-to-br from-green-500 to-green-900 p-8 text-white flex flex-col justify-center">
+                        <div className="bg-gradient-to-br from-blue-500 to-blue-900 p-8 text-white flex flex-col justify-center">
                             <h2 className="text-2xl md:text-3xl font-bold mb-4">
                                 Join our community
                             </h2>
@@ -157,7 +157,7 @@ export default function QuoteModal({ open, setOpen }) {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-gradient-to-br from-green-500 to-green-900 text-white py-2 rounded-md transition"
+                                    className="w-full bg-gradient-to-br from-blue-500 to-blue-900 text-white py-2 rounded-md transition"
                                 >
                                     Send Quote Request
                                 </button>
